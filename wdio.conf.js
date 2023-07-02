@@ -1,6 +1,3 @@
-import fs from 'node:fs/promises'
-// Import the module
-import { generate } from 'multiple-cucumber-html-reporter'
 
 exports.config = {
     //
@@ -170,39 +167,6 @@ exports.config = {
     // =====
     // Hooks
     // =====
-
-    // onPrepare: () => {
-    //   // Remove the `.tmp/` folder that holds the json and report files
-    //   return fs.rm('.tmp/', { recursive: true });
-    // },
-    // /**
-    //  * Gets executed after all workers got shut down and the process is about to exit.
-    //  */
-    // onComplete: () => {
-    //   // Generate the report when it all tests are done
-    //   generate({
-    //     // Required
-    //     // This part needs to be the same path where you store the JSON files
-    //     // default = '.tmp/json/'
-    //     jsonDir: '.tmp/json/',
-    //     reportPath: '.tmp/report/',
-
-    //     // for more options see https://github.com/wswebcreation/multiple-cucumber-html-reporter#options
-    //   });
-
-    //     // Execute generate-reporter.js file
-    //   exec('node generate-reporter.js', (error, stdout, stderr) => {
-    //     if (error) {
-    //       console.error(`Error generating report: ${error.message}`);
-    //       return;
-    //     }
-    //     if (stderr) {
-    //       console.error(`Error generating report: ${stderr}`);
-    //       return;
-    //     }
-    //     console.log(`Report generated successfully: ${stdout}`);
-    //   });
-    // }
 
     // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
     // it and to build services around it. You can either apply a single function or an array of
